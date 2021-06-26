@@ -10,12 +10,14 @@ import (
 
 func main() {
 	// hashString := os.Args[1]
+	// Choose hashcode of your commit
 	hashString := "9ca6c931881417a92322c3a380ab46edcee720b9"
 	hash, err := hex.DecodeString(hashString)
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	// Choose directory
 	client, err := store.NewClient(".")
 	if err != nil{
 		log.Fatal(err)
